@@ -2,14 +2,15 @@
 
 Needs the GitHub command line tool `gh`, logged in (`gh auth login`).
 Writes data/prs.json: one record per PR merged in the period, with its
-author, merger, every review, and every comment that talks to or comes
-from the test bot (blueorangutan).
+author, merger, every review, every comment that says "LGTM", and every
+comment that talks to or comes from the test bot (blueorangutan).
 
 Usage: python pull.py [START END]     dates as YYYY-MM-DD
 """
 import datetime
 import json
 import os
+import re
 import subprocess
 import sys
 
@@ -29,11 +30,20 @@ query($q:String!,$after:String){
       author{login}
       mergedBy{login}
       reviewDecision
-      reviews(first:100){totalCount nodes{author{login} state submittedAt url}}
+      reviews(first:100){totalCount nodes{author{login} state submittedAt url body}}
       comments(first:100){totalCount nodes{author{login} createdAt url body}}
     }}
   }
 }"""
+
+
+LGTM = re.compile(r"\blgtm\b|looks good to me", re.I)
+
+
+def says_lgtm(body):
+    """True if the text says LGTM outside of quoted lines."""
+    own = "\n".join(l for l in body.splitlines() if not l.lstrip().startswith(">"))
+    return bool(LGTM.search(own))
 
 
 def run(q, after):
@@ -73,14 +83,21 @@ def main():
             for n in s["nodes"]:
                 if not n:
                     continue
-                bot = []
+                bot, lgtm = [], []
                 for c in n["comments"]["nodes"]:
                     who = (c["author"] or {}).get("login")
                     body = c["body"] or ""
+                    rec = {"author": who, "createdAt": c["createdAt"],
+                           "url": c["url"], "body": body[:200]}
                     if who == "blueorangutan" or body.strip().lower().startswith("@blueorangutan"):
-                        bot.append({"author": who, "createdAt": c["createdAt"],
-                                    "url": c["url"], "body": body[:200]})
+                        bot.append(rec)
+                    elif says_lgtm(body):
+                        lgtm.append(rec)
                 n["botComments"] = bot
+                n["lgtmComments"] = lgtm
+                for r in n["reviews"]["nodes"]:
+                    r["lgtm"] = says_lgtm(r.get("body") or "")
+                    r["body"] = (r.get("body") or "")[:200]
                 n["commentCount"] = n["comments"]["totalCount"]
                 del n["comments"]
                 prs[n["number"]] = n

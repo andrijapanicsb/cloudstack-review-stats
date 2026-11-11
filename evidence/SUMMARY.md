@@ -1,6 +1,6 @@
 # Summary
 
-Repository: apache/cloudstack. PRs merged 2025-11-11 to 2026-11-11, downloaded 2026-11-11T23:08:56+00:00. "Inside" means employed by ShapeBlue on that day (see `affiliations.csv`).
+Repository: apache/cloudstack. PRs merged 2025-11-11 to 2026-11-11, downloaded 2026-11-11T23:21:53+00:00. "Inside" means employed by ShapeBlue on that day (see `affiliations.csv`).
 
 ## All merged PRs
 
@@ -9,20 +9,34 @@ Repository: apache/cloudstack. PRs merged 2025-11-11 to 2026-11-11, downloaded 2
 | Merged PRs opened by people | 738 |
 | Opened by inside authors | 443 of 738 (60.0%) |
 | Merged by an inside person | 671 of 738 (90.9%) |
-| Approvals given by inside people | 1513 of 1748 (86.6%) |
+| Approvals given by inside people (button or LGTM) | 1532 of 1770 (86.6%) |
+| Approvals given by inside people (button only) | 1513 of 1748 (86.6%) |
 
-## By who wrote the PR
+## By who wrote the PR: button approvals and written LGTMs
 
-| Measure | Inside authors | Outside authors | Inside authors, 500+ changed lines |
-|---|---|---|---|
-| PRs | 443 | 295 | 50 |
-| Approved only by inside people | 373 of 443 (84.2%) | 176 of 295 (59.7%) | 44 of 50 (88.0%) |
-| At least one outside approval | 66 of 443 (14.9%) | 114 of 295 (38.6%) | 5 of 50 (10.0%) |
-| Merged by an inside person | 429 of 443 (96.8%) | 242 of 295 (82.0%) | 50 of 50 (100.0%) |
-| No outside sign-off (no outside approval, inside merger) | 374 of 443 (84.4%) | 174 of 295 (59.0%) | 45 of 50 (90.0%) |
-| Merged by the author | 89 of 443 (20.1%) | 13 of 295 (4.4%) | 13 of 50 (26.0%) |
-| Fewer than two approvals | 31 of 443 (7.0%) | 27 of 295 (9.2%) | 9 of 50 (18.0%) |
-| No approval at all | 4 of 443 (0.9%) | 5 of 295 (1.7%) | 1 of 50 (2.0%) |
+| Measure | Inside authors | Outside authors | Inside authors, 500+ lines | Outside authors, 500+ lines |
+|---|---|---|---|---|
+| PRs | 443 | 295 | 50 | 37 |
+| Approved only by inside people | 373 of 443 (84.2%) | 176 of 295 (59.7%) | 44 of 50 (88.0%) | 13 of 37 (35.1%) |
+| At least one outside approval | 66 of 443 (14.9%) | 115 of 295 (39.0%) | 5 of 50 (10.0%) | 23 of 37 (62.2%) |
+| Merged by an inside person | 429 of 443 (96.8%) | 242 of 295 (82.0%) | 50 of 50 (100.0%) | 23 of 37 (62.2%) |
+| No outside sign-off (no outside approval, inside merger) | 374 of 443 (84.4%) | 173 of 295 (58.6%) | 45 of 50 (90.0%) | 14 of 37 (37.8%) |
+| Merged by the author | 89 of 443 (20.1%) | 13 of 295 (4.4%) | 13 of 50 (26.0%) | 4 of 37 (10.8%) |
+| Fewer than two approvals | 31 of 443 (7.0%) | 25 of 295 (8.5%) | 9 of 50 (18.0%) | 3 of 37 (8.1%) |
+| No approval at all | 4 of 443 (0.9%) | 4 of 295 (1.4%) | 1 of 50 (2.0%) | 1 of 37 (2.7%) |
+
+## By who wrote the PR: button approvals only
+
+| Measure | Inside authors | Outside authors | Inside authors, 500+ lines | Outside authors, 500+ lines |
+|---|---|---|---|---|
+| PRs | 443 | 295 | 50 | 37 |
+| Approved only by inside people | 373 of 443 (84.2%) | 176 of 295 (59.7%) | 44 of 50 (88.0%) | 13 of 37 (35.1%) |
+| At least one outside approval | 66 of 443 (14.9%) | 114 of 295 (38.6%) | 5 of 50 (10.0%) | 23 of 37 (62.2%) |
+| Merged by an inside person | 429 of 443 (96.8%) | 242 of 295 (82.0%) | 50 of 50 (100.0%) | 23 of 37 (62.2%) |
+| No outside sign-off (no outside approval, inside merger) | 374 of 443 (84.4%) | 174 of 295 (59.0%) | 45 of 50 (90.0%) | 14 of 37 (37.8%) |
+| Merged by the author | 89 of 443 (20.1%) | 13 of 295 (4.4%) | 13 of 50 (26.0%) | 4 of 37 (10.8%) |
+| Fewer than two approvals | 31 of 443 (7.0%) | 27 of 295 (9.2%) | 9 of 50 (18.0%) | 4 of 37 (10.8%) |
+| No approval at all | 4 of 443 (0.9%) | 5 of 295 (1.7%) | 1 of 50 (2.0%) | 1 of 37 (2.7%) |
 
 ## Smoke-test commands (`@blueorangutan test`)
 
