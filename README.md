@@ -162,8 +162,8 @@ change the list and the repository name.
   count is slightly generous.
 - Whether an approver is a committer is not checked.
 - The affiliation list was put together from public profiles and from the
-  repository owner's own knowledge as a former ShapeBlue employee. Two
-  leaving dates are approximate and are marked so in the file. Corrections
+  repository owner's own knowledge as a former ShapeBlue employee. One
+  leaving date is approximate and is marked so in the file. Corrections
   are welcome.
 - Comments are read from the first 100 of each pull request. Six pull
   requests have more than that. Whether the bot started a test run is judged
