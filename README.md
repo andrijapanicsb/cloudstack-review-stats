@@ -15,7 +15,9 @@ It is not about any person, and it is not a case against any company.
 ## Credit where it is due
 
 The same data that raises the question also shows who carries the project.
-In this one year, people employed by ShapeBlue:
+One company employs most of the people who review, test and merge in this
+project. This page does not name it, because the point is the pattern and
+not the company. In this one year, the people employed there:
 
 - wrote 443 of the 738 merged pull requests (60%),
 - gave 1,532 of the 1,770 approvals (87%),
@@ -47,7 +49,7 @@ review was careless.
 
 Period: pull requests merged from 11 November 2025 to 11 November 2026, all
 branches, 738 pull requests opened by people (bots left out). "Inside" means
-the person was a ShapeBlue employee on that day. "Outside" means everyone
+the person was employed by that company on that day. "Outside" means everyone
 else. An approval is either the GitHub "Approve" button or a written "LGTM".
 
 | Question | Inside authors (443 PRs) | Outside authors (295 PRs) |
@@ -79,12 +81,12 @@ How to read this:
 
 ### Smoke tests
 
-The project's smoke tests run on infrastructure owned by ShapeBlue, through a
+The project's smoke tests run on infrastructure owned by that company, through a
 bot called blueorangutan. Anyone can ask the bot to build packages. Only
 people on the bot's own list can start a test run; the bot prints that list
 in its help text
 ([example, 14 August 2026](https://github.com/apache/cloudstack/pull/13807#issuecomment-5292305992)).
-All 19 people on that list were ShapeBlue employees.
+All 19 people on that list were its employees.
 
 In the first 100 comments of each pull request in the period:
 
@@ -96,7 +98,7 @@ In the first 100 comments of each pull request in the period:
 The 4 runs started for an outside person were all for one former employee,
 in the ten days after leaving the company.
 
-The hardware belongs to ShapeBlue, and it is reasonable that its owner
+The hardware belongs to that company, and it is reasonable that its owner
 decides who may use it. Nobody else has offered the project comparable
 infrastructure. The effect is still that an outside contributor cannot get a
 smoke-test result without asking an inside person. The durable answer is
@@ -130,7 +132,7 @@ review or comment it rests on.
   sign-off is not counted. Written LGTMs add 22 approvals to the 1,748 given
   with the button, and change no headline figure.
 - **Inside or outside**: `affiliations.csv` lists the people counted as
-  ShapeBlue employees, and the leaving date for those who left. Authors are
+  inside, and the leaving date for those who left. Authors are
   judged on the day the PR was opened, approvers on the day of the sign-off,
   mergers on the day of the merge.
 - **Large**: 500 or more lines added plus removed.
@@ -162,7 +164,7 @@ change the list and the repository name.
   count is slightly generous.
 - Whether an approver is a committer is not checked.
 - The affiliation list was put together from public profiles and from the
-  repository owner's own knowledge as a former ShapeBlue employee. One
+  repository owner's own knowledge as a former employee of that company. One
   leaving date is approximate and is marked so in the file. Corrections
   are welcome.
 - Comments are read from the first 100 of each pull request. Six pull
