@@ -79,6 +79,38 @@ How to read this:
 - Inside people review outside work: most outside pull requests were approved
   and merged by them.
 
+### The same counts for every organisation
+
+To check that the picture is not an effect of looking at one company only,
+the same counts were made for every organisation that could be identified
+from public sources. Two are large enough for percentages: the largest
+(443 PRs) and the second largest (107 PRs). The full tables, with every
+organisation named, are in `evidence/ORGANISATIONS.md`.
+
+| Question | Largest organisation | Second largest |
+|---|---|---|
+| Share of all merged PRs | 60% | 14% |
+| Share of all approvals given | 87% | 10% |
+| Own PRs approved only by own people | 373 of 443 (84%) | 21 of 107 (20%) |
+| Own PRs with an approval from someone else | 66 of 443 (15%) | 86 of 107 (80%) |
+| Own PRs merged by own people | 429 of 443 (97%) | 33 of 107 (31%) |
+| Share of its approvals that went to its own PRs | 66% | 60% |
+
+How to read this:
+
+- The difference in the third row is large, but part of it is arithmetic.
+  When one organisation gives 87% of all approvals, nearly every PR written
+  by anyone else gets one of them, while its own PRs can only get an outside
+  approval from the remaining 13%. The row measures how few reviewers there
+  are elsewhere as much as it measures anyone's habits.
+- The last row is the fairer comparison. The second largest organisation
+  gives 60% of its approvals to its own PRs, which are 14% of all PRs. The
+  largest gives 66% to its own, which are 60% of all PRs. Relative to size,
+  the smaller one stays closer to home. Reviewing mostly the work of one's
+  own colleagues is what every organisation here does.
+- Everyone outside the largest organisation gave 238 approvals. Only 72 of
+  them (30%) went to its PRs, which are 60% of the work.
+
 ### Smoke tests
 
 The project's smoke tests run on infrastructure owned by that company, through a
@@ -120,6 +152,8 @@ review or comment it rests on.
 | `fewer_than_two_approvals.csv` | The 56 PRs merged with fewer than two approvals |
 | `self_merged.csv` | The 102 PRs merged by their own author |
 | `smoke_test_commands.csv` | Every `test` command, who gave it, and whether the bot started a run |
+| `ORGANISATIONS.md` | The same counts for every organisation, and a table of who approves whose PRs |
+| `by_organisation.csv` | The raw counts behind `ORGANISATIONS.md` |
 
 ## Details
 
@@ -150,9 +184,14 @@ python pull.py
 python count.py
 ```
 
+```bash
+python count_orgs.py
+```
+
 `pull.py` downloads the pull requests into `data/prs.json` (about five
 minutes). `count.py` reads that file and `affiliations.csv` and rewrites the
-`evidence` folder. To count a different period, pass two dates to `pull.py`.
+`evidence` folder. `count_orgs.py` reads the same file and
+`organisations.csv` and writes the per-organisation tables. To count a different period, pass two dates to `pull.py`.
 To correct who is counted as inside, edit `affiliations.csv` and run
 `count.py` again. The same scripts work for any company or any repository:
 change the list and the repository name.
@@ -167,6 +206,13 @@ change the list and the repository name.
   repository owner's own knowledge as a former employee of that company. One
   leaving date is approximate and is marked so in the file. Corrections
   are welcome.
+- `organisations.csv` places 61 people, each with its source: the company
+  on the person's own GitHub profile, the address on their commits or list
+  mails, or the company fork their pull requests come from. A company fork
+  shows where someone worked at that time; it is not a statement by the
+  person. Everyone else, mostly people with one or two pull requests, is
+  counted as "Individuals or not known". Two dates in the file are
+  approximate. Corrections are welcome.
 - Comments are read from the first 100 of each pull request. Six pull
   requests have more than that. Whether the bot started a test run is judged
   from its next replies, which can be wrong when several commands follow
