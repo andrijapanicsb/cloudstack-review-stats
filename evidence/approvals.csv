@@ -3,6 +3,8 @@ pr,pr_author,author_organisation,approver,approver_organisation,same_organisatio
 7405,GaOrtiga,SC Clouds,weizhouapache,ShapeBlue,False,2023-04-17,button,https://github.com/apache/cloudstack/pull/7405#pullrequestreview-1387541983
 7562,jbampton,Individuals or not known,DaanHoogland,ShapeBlue,False,2025-12-18,button,https://github.com/apache/cloudstack/pull/7562#pullrequestreview-3593703527
 7562,jbampton,Individuals or not known,abh1sar,ShapeBlue,False,2026-09-10,button,https://github.com/apache/cloudstack/pull/7562#pullrequestreview-5163135308
+7857,vladimirpetrov,ShapeBlue,harikrishna-patnala,ShapeBlue,True,2025-12-05,button,https://github.com/apache/cloudstack/pull/7857#pullrequestreview-3543738778
+7857,vladimirpetrov,ShapeBlue,shwstppr,ShapeBlue,True,2025-12-08,button,https://github.com/apache/cloudstack/pull/7857#pullrequestreview-3550262933
 8151,madhukar93,Individuals or not known,DaanHoogland,ShapeBlue,False,2023-11-07,button,https://github.com/apache/cloudstack/pull/8151#pullrequestreview-1717998360
 8151,madhukar93,Individuals or not known,Pearl1594,ShapeBlue,False,2025-10-29,button,https://github.com/apache/cloudstack/pull/8151#pullrequestreview-3393060156
 8151,madhukar93,Individuals or not known,harikrishna-patnala,ShapeBlue,False,2023-10-30,lgtm,https://github.com/apache/cloudstack/pull/8151#pullrequestreview-1703338716

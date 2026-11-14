@@ -1,6 +1,6 @@
 # Summary
 
-Repository: apache/cloudstack. PRs merged 2025-11-11 to 2026-11-11, downloaded 2026-11-11T23:21:53+00:00. 738 merged PRs opened by people, 1770 approvals (1748 with the button, 22 as a written LGTM). Who belongs where is in `organisations.csv`, with the public source of each entry. Percentages are left out where a group has fewer than 20 PRs.
+Repository: apache/cloudstack. PRs merged 2025-11-11 to 2026-11-11, downloaded 2026-11-11T23:21:53+00:00. 738 merged PRs opened by people, 1772 approvals (1750 with the button, 22 as a written LGTM). Who belongs where is in `organisations.csv`, with the public source of each entry. Percentages are left out where a group has fewer than 20 PRs.
 
 ## Which number is which organisation
 
@@ -8,7 +8,7 @@ Repository: apache/cloudstack. PRs merged 2025-11-11 to 2026-11-11, downloaded 2
 
 | Number | Organisation | PRs written | Approvals given | Merges done |
 |---|---|---|---|---|
-| Organisation 1 | ShapeBlue | 443 | 1532 | 671 |
+| Organisation 1 | ShapeBlue | 443 | 1534 | 671 |
 | Organisation 2 | SC Clouds | 107 | 179 | 57 |
 | Organisation 3 | LINBIT | 10 | 12 | 4 |
 | Organisation 4 | NetApp | 9 | 9 | 0 |
@@ -26,7 +26,7 @@ Repository: apache/cloudstack. PRs merged 2025-11-11 to 2026-11-11, downloaded 2
 
 | Organisation | PRs written | Approvals given | of those, on others' PRs | Merges done | of those, of others' PRs |
 |---|---|---|---|---|---|
-| ShapeBlue | 443 (60%) | 1532 (87%) | 524 | 671 | 242 |
+| ShapeBlue | 443 (60%) | 1534 (87%) | 524 | 671 | 242 |
 | SC Clouds | 107 (14%) | 179 (10%) | 71 | 57 | 24 |
 | LINBIT | 10 (1%) | 12 (1%) | 12 | 4 | 1 |
 | NetApp | 9 (1%) | 9 (1%) | 2 | 0 | 0 |
@@ -41,7 +41,7 @@ Repository: apache/cloudstack. PRs merged 2025-11-11 to 2026-11-11, downloaded 2
 
 | Organisation | PRs | Approved only by own people | At least one approval from another | Merged by own people | No sign-off from another | Merged by the author | Fewer than two approvals | No approval at all |
 |---|---|---|---|---|---|---|---|---|
-| ShapeBlue | 443 | 373 of 443 (84%) | 66 of 443 (15%) | 429 of 443 (97%) | 374 of 443 (84%) | 89 of 443 (20%) | 31 of 443 (7%) | 4 of 443 (1%) |
+| ShapeBlue | 443 | 374 of 443 (84%) | 66 of 443 (15%) | 429 of 443 (97%) | 374 of 443 (84%) | 89 of 443 (20%) | 30 of 443 (7%) | 3 of 443 (1%) |
 | SC Clouds | 107 | 21 of 107 (20%) | 86 of 107 (80%) | 33 of 107 (31%) | 14 of 107 (13%) | 8 of 107 (7%) | 5 of 107 (5%) | 0 of 107 (0%) |
 | LINBIT | 10 | 0 of 10 | 10 of 10 | 3 of 10 | 0 of 10 | 3 of 10 | 1 of 10 | 0 of 10 |
 | NetApp | 9 | 0 of 9 | 9 of 9 | 0 of 9 | 0 of 9 | 0 of 9 | 0 of 9 | 0 of 9 |
@@ -54,7 +54,7 @@ Repository: apache/cloudstack. PRs merged 2025-11-11 to 2026-11-11, downloaded 2
 
 | Organisation | Large PRs | At least one approval from another | No sign-off from another | Fewer than two approvals |
 |---|---|---|---|---|
-| ShapeBlue | 50 | 5 of 50 (10%) | 45 of 50 (90%) | 9 of 50 (18%) |
+| ShapeBlue | 50 | 5 of 50 (10%) | 45 of 50 (90%) | 8 of 50 (16%) |
 | SC Clouds | 18 | 10 of 18 | 5 of 18 | 1 of 18 |
 | LINBIT | 4 | 4 of 4 | 0 of 4 | 1 of 4 |
 | NetApp | 3 | 3 of 3 | 0 of 3 | 0 of 3 |
@@ -68,7 +68,7 @@ Rows: who wrote the PR. Columns: who approved it. Each cell is a number of appro
 
 | Written by \ approved by | ShapeBlue | SC Clouds | LINBIT | NetApp | Your.Online | StorPool | 7 smaller organisations | Individuals or not known |
 |---|---|---|---|---|---|---|---|---|
-| ShapeBlue | 1008 | 45 | 6 | 2 | 6 | 5 | 0 | 8 |
+| ShapeBlue | 1010 | 45 | 6 | 2 | 6 | 5 | 0 | 8 |
 | SC Clouds | 163 | 108 | 0 | 0 | 1 | 1 | 0 | 3 |
 | LINBIT | 20 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
 | NetApp | 16 | 3 | 0 | 7 | 0 | 0 | 0 | 0 |
@@ -98,7 +98,7 @@ The 7 smaller organisations are: Cyso, IBM (linux-on-ibm-z), Leaseweb, Nexthop, 
 | [#13656](https://github.com/apache/cloudstack/pull/13656) | 21212 | andrijapanicsb | ShapeBlue | - | rp- (LINBIT); wido (Your.Online) | DaanHoogland (ShapeBlue) | yes |
 | [#13907](https://github.com/apache/cloudstack/pull/13907) | 16583 | shwstppr | ShapeBlue | nvazquez sureshanaparti vladimirpetrov | - | nvazquez (ShapeBlue) | no |
 | [#12737](https://github.com/apache/cloudstack/pull/12737) | 14578 | sudo87 | ShapeBlue | vladimirpetrov weizhouapache | - | weizhouapache (ShapeBlue) | no |
-| [#7857](https://github.com/apache/cloudstack/pull/7857) | 13604 | vladimirpetrov | ShapeBlue | - | - | harikrishna-patnala (ShapeBlue) | no |
+| [#7857](https://github.com/apache/cloudstack/pull/7857) | 13604 | vladimirpetrov | ShapeBlue | harikrishna-patnala shwstppr | - | harikrishna-patnala (ShapeBlue) | no |
 | [#12711](https://github.com/apache/cloudstack/pull/12711) | 13425 | vishesh92 | ShapeBlue | harikrishna-patnala kiranchavala sureshanaparti | - | harikrishna-patnala (ShapeBlue) | no |
 | [#13032](https://github.com/apache/cloudstack/pull/13032) | 12588 | weizhouapache | ShapeBlue | DaanHoogland vishesh92 | - | weizhouapache (ShapeBlue) | no |
 | [#12357](https://github.com/apache/cloudstack/pull/12357) | 12536 | Pearl1594 | ShapeBlue | kiranchavala weizhouapache | - | harikrishna-patnala (ShapeBlue) | no |

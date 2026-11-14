@@ -61,6 +61,18 @@ def run(q, after):
     raise SystemExit("GitHub API call failed")
 
 
+def all_reviews(number):
+    """Every review of one PR, for PRs with more than the 100 the query returns."""
+    r = subprocess.run(
+        ["gh", "api", "--paginate", "--slurp", f"repos/{REPO}/pulls/{number}/reviews?per_page=100"],
+        capture_output=True, text=True, encoding="utf-8")
+    if r.returncode != 0:
+        raise SystemExit(f"could not read the reviews of PR {number}: {r.stderr[:200]}")
+    return [{"author": {"login": (x.get("user") or {}).get("login")}, "state": x["state"],
+             "submittedAt": x.get("submitted_at"), "url": x["html_url"], "body": x.get("body")}
+            for page in json.loads(r.stdout) for x in page]
+
+
 def windows(start, end, days=15):
     d = start
     while d <= end:
@@ -95,6 +107,8 @@ def main():
                         lgtm.append(rec)
                 n["botComments"] = bot
                 n["lgtmComments"] = lgtm
+                if n["reviews"]["totalCount"] > len(n["reviews"]["nodes"]):
+                    n["reviews"]["nodes"] = all_reviews(n["number"])
                 for r in n["reviews"]["nodes"]:
                     r["lgtm"] = says_lgtm(r.get("body") or "")
                     r["body"] = (r.get("body") or "")[:200]

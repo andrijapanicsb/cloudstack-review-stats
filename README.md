@@ -32,7 +32,7 @@ The same data that raises the question also shows who carries the project.
 In this one year, the people employed by Organisation 1:
 
 - wrote 443 of the 738 merged pull requests (60%),
-- gave 1,532 of the 1,770 approvals (87%),
+- gave 1,534 of the 1,772 approvals (87%),
 - did 671 of the 738 merges (91%), including 242 of the 295 pull requests
   written by others,
 - ran the only smoke-test infrastructure the project has, on their own
@@ -71,7 +71,7 @@ requests.
 
 | Organisation | PRs written | Approvals given | of those, on others' PRs | Merges done | of those, of others' PRs |
 |---|---|---|---|---|---|
-| Organisation 1 | 443 (60%) | 1532 (87%) | 524 | 671 | 242 |
+| Organisation 1 | 443 (60%) | 1534 (87%) | 524 | 671 | 242 |
 | Organisation 2 | 107 (14%) | 179 (10%) | 71 | 57 | 24 |
 | Organisation 3 | 10 (1%) | 12 (1%) | 12 | 4 | 1 |
 | Organisation 4 | 9 (1%) | 9 (1%) | 2 | 0 | 0 |
@@ -86,7 +86,7 @@ requests.
 
 | Organisation | PRs | Approved only by own people | At least one approval from another | Merged by own people | No sign-off from another | Merged by the author | Fewer than two approvals | No approval at all |
 |---|---|---|---|---|---|---|---|---|
-| Organisation 1 | 443 | 373 of 443 (84%) | 66 of 443 (15%) | 429 of 443 (97%) | 374 of 443 (84%) | 89 of 443 (20%) | 31 of 443 (7%) | 4 of 443 (1%) |
+| Organisation 1 | 443 | 374 of 443 (84%) | 66 of 443 (15%) | 429 of 443 (97%) | 374 of 443 (84%) | 89 of 443 (20%) | 30 of 443 (7%) | 3 of 443 (1%) |
 | Organisation 2 | 107 | 21 of 107 (20%) | 86 of 107 (80%) | 33 of 107 (31%) | 14 of 107 (13%) | 8 of 107 (7%) | 5 of 107 (5%) | 0 of 107 (0%) |
 | Organisation 3 | 10 | 0 of 10 | 10 of 10 | 3 of 10 | 0 of 10 | 3 of 10 | 1 of 10 | 0 of 10 |
 | Organisation 4 | 9 | 0 of 9 | 9 of 9 | 0 of 9 | 0 of 9 | 0 of 9 | 0 of 9 | 0 of 9 |
@@ -99,7 +99,7 @@ requests.
 
 | Organisation | Large PRs | At least one approval from another | No sign-off from another | Fewer than two approvals |
 |---|---|---|---|---|
-| Organisation 1 | 50 | 5 of 50 (10%) | 45 of 50 (90%) | 9 of 50 (18%) |
+| Organisation 1 | 50 | 5 of 50 (10%) | 45 of 50 (90%) | 8 of 50 (16%) |
 | Organisation 2 | 18 | 10 of 18 | 5 of 18 | 1 of 18 |
 | Organisation 3 | 4 | 4 of 4 | 0 of 4 | 1 of 4 |
 | Organisation 4 | 3 | 3 of 3 | 0 of 3 | 0 of 3 |
@@ -113,7 +113,7 @@ Rows: who wrote the PR. Columns: who approved it. Each cell is a number of appro
 
 | Written by \ approved by | Organisation 1 | Organisation 2 | Organisation 3 | Organisation 4 | Organisation 5 | Organisation 6 | Organisations 7 to 13 together | Individuals or not known |
 |---|---|---|---|---|---|---|---|---|
-| Organisation 1 | 1008 | 45 | 6 | 2 | 6 | 5 | 0 | 8 |
+| Organisation 1 | 1010 | 45 | 6 | 2 | 6 | 5 | 0 | 8 |
 | Organisation 2 | 163 | 108 | 0 | 0 | 1 | 1 | 0 | 3 |
 | Organisation 3 | 20 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Organisation 4 | 16 | 3 | 0 | 7 | 0 | 0 | 0 | 0 |
@@ -127,7 +127,7 @@ How to read this:
 
 - Review is concentrated. One organisation gives 87% of all approvals and
   does 91% of all merges. Organisations 3 to 13 together give 43 of the
-  1,770 approvals (2%).
+  1,772 approvals (2%).
 - Organisation 1 has 84% of its own PRs approved only by its own people;
   Organisation 2 has 20%. Part of that difference is arithmetic. When one
   organisation gives 87% of all approvals, nearly every PR written by anyone
@@ -207,7 +207,7 @@ review or comment it rests on. These files use the organisations' names.
   review in state "Approved" or a comment or review text that says "LGTM" or
   "looks good to me". The project treats both as approvals. If a person
   later pressed "Request changes" and never approved again, their earlier
-  sign-off is not counted. Of the 1,770 approvals, 1,748 were given with
+  sign-off is not counted. Of the 1,772 approvals, 1,750 were given with
   the button and 22 as a written LGTM; `approvals.csv` says which is which.
 - **Organisation**: `organisations.csv` lists each person, their
   organisation, the dates where they are known, and the public source.
@@ -262,7 +262,6 @@ work for any repository: change the list and the repository name.
   requests have more than that. Whether the bot started a test run is judged
   from its next replies, which can be wrong when several commands follow
   each other closely.
-- One pull request has more than 100 reviews; only its first 100 are read.
 - The data is a snapshot taken on 11 November 2026. Running `pull.py` later
   can give slightly different numbers.
 - The numbers measure who signed off. They do not measure the quality of any
