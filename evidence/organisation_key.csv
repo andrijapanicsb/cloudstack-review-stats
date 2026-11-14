@@ -1,0 +1,14 @@
+number,organisation,prs_written,approvals_given,merges_done
+Organisation 1,ShapeBlue,443,1532,671
+Organisation 2,SC Clouds,107,179,57
+Organisation 3,LINBIT,10,12,4
+Organisation 4,NetApp,9,9,0
+Organisation 5,Your.Online,6,9,1
+Organisation 6,StorPool,2,10,0
+Organisation 7,Nexthop,5,2,0
+Organisation 8,Pure Storage,5,0,0
+Organisation 9,Playtika,4,0,0
+Organisation 10,IBM (linux-on-ibm-z),2,0,0
+Organisation 11,Cyso,1,0,0
+Organisation 12,Leaseweb,0,1,0
+Organisation 13,Wavecom,1,0,0
